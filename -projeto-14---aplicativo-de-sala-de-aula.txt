@@ -1,0 +1,35 @@
+function adicionarNota(notas, nota) {
+  notas.push(nota)
+  return notas 
+}
+
+function obterTotalDeNotas(notas) {
+  return notas.length
+}
+
+function obterPrimeiraNota(notas) {
+ return notas[notas.length - notas.length]
+}
+
+function obterUltimaNota(notas) {
+return notas[notas.length -1]
+}
+
+function obterSomaDasNotas(notas) {
+ 
+ let soma = notas.reduce(function(total, atual){
+  return total + atual
+},0)
+return soma
+}
+
+function obterMediaDasNotas(notas) {
+ return obterSomaDasNotas(notas) / notas.length
+}
+
+function obterNotasAumentadasEm2(notas) {
+  let notasAumentadas = notas.map(function(nota){
+    return nota +2
+  })
+  return notasAumentadas
+}
